@@ -56,7 +56,7 @@ export const Navigation = () => {
               <span className="font-display font-bold text-white text-lg">∞</span>
             </div>
             <span className="font-display font-bold text-xl text-white">
-              AGRA v∞
+              Dharti v∞
             </span>
           </motion.a>
 

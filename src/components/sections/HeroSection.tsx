@@ -60,7 +60,7 @@ export const HeroSection = () => {
           delay={0.4}
           className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-[0.95]"
         >
-          <span className="block">AGRA</span>
+          <span className="block">Dharti</span>
           <span className="block text-gradient-earth">v∞</span>
         </AnimatedHeadline>
 
