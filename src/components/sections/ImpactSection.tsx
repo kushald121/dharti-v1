@@ -90,7 +90,7 @@ export const ImpactSection = () => {
             <span className="text-gradient-earth">Agriculture</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Real results from real farms. AGRA v∞ is making a measurable difference 
+            Real results from real farms. Dharti v∞ is making a measurable difference 
             in food security and farmer livelihoods worldwide.
           </p>
         </ScrollReveal>
@@ -117,7 +117,7 @@ export const ImpactSection = () => {
               
               <blockquote className="relative z-10">
                 <p className="text-xl md:text-2xl text-foreground mb-6 italic">
-                  AGRA v∞ didn't just give me data—it gave me understanding. 
+                  Dharti v∞ didn't just give me data—it gave me understanding. 
                   I can now predict problems before they happen and make decisions 
                   that used to take weeks in just minutes.
                 </p>

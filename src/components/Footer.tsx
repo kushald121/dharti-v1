@@ -20,7 +20,7 @@ export const Footer = () => {
                 <span className="font-display font-bold text-white text-lg">∞</span>
               </div>
               <span className="font-display font-bold text-xl text-foreground">
-                AGRA v∞
+                Dharti v∞
               </span>
             </div>
             <p className="text-muted-foreground text-sm mb-6 max-w-xs">
@@ -64,7 +64,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2024 AGRA v∞. All rights reserved.
+            © 2024 Dharti v∞. All rights reserved.
           </p>
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <Leaf className="w-4 h-4 text-accent" />
