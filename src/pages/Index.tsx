@@ -8,7 +8,6 @@ import { Footer } from "@/components/Footer";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/contexts/AuthContext";
-import { LanguageToggle } from "@/components/LanguageToggle";
 import { LogIn, LayoutDashboard, Building2 } from "lucide-react";
 
 const Index = () => {
@@ -20,18 +19,31 @@ const Index = () => {
       <Navigation />
       
       {/* Quick Access Bar */}
-      <div className="fixed top-4 right-4 z-50 flex gap-2">
-        <Button variant="outline" onClick={() => navigate('/institution-demo')} className="shadow-lg">
+      <div className="fixed top-20 right-4 z-40 flex flex-col gap-2">
+        <Button 
+          variant="outline" 
+          onClick={() => navigate('/institution-demo')} 
+          className="shadow-lg bg-white/95 backdrop-blur"
+          size="sm"
+        >
           <Building2 className="w-4 h-4 mr-2" />
-          Institution View
+          Institution
         </Button>
         {isAuthenticated ? (
-          <Button onClick={() => navigate('/dashboard')} className="shadow-lg">
+          <Button 
+            onClick={() => navigate('/dashboard')} 
+            className="shadow-lg"
+            size="sm"
+          >
             <LayoutDashboard className="w-4 h-4 mr-2" />
             Dashboard
           </Button>
         ) : (
-          <Button onClick={() => navigate('/login')} className="shadow-lg">
+          <Button 
+            onClick={() => navigate('/login')} 
+            className="shadow-lg"
+            size="sm"
+          >
             <LogIn className="w-4 h-4 mr-2" />
             Login
           </Button>
