@@ -223,3 +223,136 @@ export const MOCK_NOTIFICATIONS: Notification[] = [
     timestamp: '2026-01-27T14:20:00'
   }
 ];
+
+// Decision Timeline
+export interface Decision {
+  id: string;
+  date: string;
+  action: string;
+  status: 'completed' | 'pending' | 'delayed';
+  outcome?: string;
+  reason?: string;
+}
+
+export const MOCK_DECISIONS: Decision[] = [
+  { id: '1', date: '2026-01-22', action: 'WAIT', status: 'completed', outcome: 'Rain came as expected', reason: 'Weather forecast' },
+  { id: '2', date: '2026-01-23', action: 'IRRIGATE', status: 'completed', outcome: 'Soil moisture improved', reason: 'Low moisture detected' },
+  { id: '3', date: '2026-01-24', action: 'SPRAY DELAY', status: 'delayed', outcome: 'Wind too strong', reason: 'Weather conditions' },
+  { id: '4', date: '2026-01-25', action: 'FERTILIZE', status: 'completed', outcome: 'Applied successfully', reason: 'Growth stage optimal' },
+  { id: '5', date: '2026-01-26', action: 'MONITOR', status: 'completed', outcome: 'No action needed', reason: 'All parameters normal' },
+  { id: '6', date: '2026-01-27', action: 'PEST CONTROL', status: 'completed', outcome: 'Early intervention successful', reason: 'Satellite detection' },
+  { id: '7', date: '2026-01-28', action: 'IRRIGATE', status: 'pending', reason: 'Soil moisture dropping' }
+];
+
+// Farm Health Status
+export type HealthStatus = 'Good' | 'Watch' | 'Risk';
+export type WaterStatus = 'Adequate' | 'Stress';
+export type ClimateRisk = 'Low' | 'Medium' | 'High';
+export type MarketReadiness = 'Weak' | 'Neutral' | 'Strong';
+
+export interface FarmHealthSnapshot {
+  cropHealth: HealthStatus;
+  waterStatus: WaterStatus;
+  climateRisk: ClimateRisk;
+  marketReadiness: MarketReadiness;
+}
+
+export const MOCK_HEALTH_SNAPSHOT: FarmHealthSnapshot = {
+  cropHealth: 'Good',
+  waterStatus: 'Adequate',
+  climateRisk: 'Medium',
+  marketReadiness: 'Strong'
+};
+
+// Community Signals
+export interface CommunitySignal {
+  id: string;
+  message: string;
+  type: 'trend' | 'alert' | 'insight';
+  timestamp: string;
+}
+
+export const MOCK_COMMUNITY_SIGNALS: CommunitySignal[] = [
+  { id: '1', message: '68% nearby farms delayed sowing this week', type: 'trend', timestamp: '2026-01-28T10:00:00' },
+  { id: '2', message: 'Pest alert reported 3–5 km away', type: 'alert', timestamp: '2026-01-28T08:30:00' },
+  { id: '3', message: 'Water usage unusually high in your block', type: 'insight', timestamp: '2026-01-27T16:00:00' }
+];
+
+// Recent Alerts
+export interface SystemAlert {
+  id: string;
+  what: string;
+  when: string;
+  suggestedAction: string;
+  severity: 'high' | 'medium' | 'low';
+}
+
+export const MOCK_SYSTEM_ALERTS: SystemAlert[] = [
+  {
+    id: '1',
+    what: 'Heatwave expected',
+    when: 'In 48 hours',
+    suggestedAction: 'Increase irrigation frequency, apply mulch',
+    severity: 'high'
+  },
+  {
+    id: '2',
+    what: 'Heavy rainfall warning',
+    when: 'Tomorrow evening',
+    suggestedAction: 'Delay fertilizer application, check drainage',
+    severity: 'medium'
+  },
+  {
+    id: '3',
+    what: 'Pest risk detected nearby',
+    when: 'Active now',
+    suggestedAction: 'Monitor crops closely, prepare pest control',
+    severity: 'medium'
+  }
+];
+
+// System Status
+export interface SystemStatus {
+  dataFreshness: string;
+  confidenceLevel: 'High' | 'Medium' | 'Low';
+  sources: string[];
+  lastUpdated: string;
+}
+
+export const MOCK_SYSTEM_STATUS: SystemStatus = {
+  dataFreshness: 'Updated 2 hrs ago',
+  confidenceLevel: 'High',
+  sources: ['Weather', 'Soil Sensors', 'Satellite', 'Community'],
+  lastUpdated: '2026-01-28T10:00:00'
+};
+
+// Knowledge Nuggets
+export interface KnowledgeNugget {
+  id: string;
+  title: string;
+  explanation: string[];
+  audioLength?: string;
+}
+
+export const MOCK_KNOWLEDGE_NUGGETS: KnowledgeNugget[] = [
+  {
+    id: '1',
+    title: 'Why AGRA suggested irrigation today',
+    explanation: [
+      'Soil moisture dropped below optimal level',
+      'No rain expected in next 3 days',
+      'Crop is in critical growth stage'
+    ],
+    audioLength: '25 sec'
+  },
+  {
+    id: '2',
+    title: 'Why pest control was recommended',
+    explanation: [
+      'Satellite detected early signs in neighboring plots',
+      'Weather conditions favor pest spread',
+      'Early action prevents major damage'
+    ],
+    audioLength: '30 sec'
+  }
+];
